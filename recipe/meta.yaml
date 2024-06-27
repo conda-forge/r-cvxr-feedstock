@@ -1,4 +1,4 @@
-{% set version = "1.0-13" %}
+{% set version = "1.0-14" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/CVXR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/CVXR/CVXR_{{ version }}.tar.gz
-  sha256: 81895c750a562d04bb6840ef7744f3a2dd6232b076d5c18ecdcf30a60f83875a
+  sha256: 4d027cc2b933720ded4edcc098fde1259992673825abdb109fd84fee4af57cdb
 
 build:
   merge_build_host: true  # [win]
