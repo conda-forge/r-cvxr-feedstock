@@ -1,4 +1,4 @@
-{% set version = "1.0-15" %}
+{% set version = "1.8.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/CVXR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/CVXR/CVXR_{{ version }}.tar.gz
-  sha256: c13b192a3793103880b43fb4d213a7928b0fc24db3a8df7b3f5cb587f92b838c
+  sha256: c764c9c10f1f5ec57f141fadd5895854bf946beba5b80fa82ce4b4a95868549c
 
 build:
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -78,8 +78,8 @@ about:
   home: https://cvxr.rbind.io, https://www.cvxgrp.org/CVXR/
   dev_url: https://github.com/cvxgrp/CVXR
   license: Apache-2.0
-  summary: An object-oriented modeling language for disciplined convex programming (DCP) as described in Fu, Narasimhan, and Boyd (2020, <doi:10.18637/jss.v094.i14>). It allows the user to formulate convex optimization problems in a natural way following mathematical convention and DCP rules. The system analyzes the problem,
-    verifies its convexity, converts it into a canonical form, and hands it off to an appropriate solver to obtain the solution. Interfaces to solvers on CRAN and elsewhere are provided, both commercial and open source.
+  summary: An object-oriented modeling language for disciplined convex programming (DCP) as described in Fu, Narasimhan, and Boyd (2020, <doi:10.18637/jss.v094.i14>). It allows the user to formulate convex optimization problems in a natural way following mathematical convention and DCP rules. The system analyzes the 
+    problem, verifies its convexity, converts it into a canonical form, and hands it off to an appropriate solver to obtain the solution. Interfaces to solvers on CRAN and elsewhere are provided, both commercial and open source.
   license_file:
     - APACHE-2.0.txt
     - LICENSE
