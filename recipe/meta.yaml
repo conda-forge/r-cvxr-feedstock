@@ -16,6 +16,10 @@ build:
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
@@ -31,43 +35,42 @@ requirements:
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
-    - r-bit64                      # [build_platform != target_platform]
-    - r-cli                        # [build_platform != target_platform]
-    - r-ecosolver >=0.5.4          # [build_platform != target_platform]
-    - r-gmp                        # [build_platform != target_platform]
-    - r-matrix                     # [build_platform != target_platform]
-    - r-osqp                       # [build_platform != target_platform]
-    - r-r6                         # [build_platform != target_platform]
-    - r-rcpp >=0.12.12             # [build_platform != target_platform]
+    - r-clarabel >=0.11            # [build_platform != target_platform]
+    - r-cli >=3.6                  # [build_platform != target_platform]
+    - r-gmp >=0.7                  # [build_platform != target_platform]
+    - r-highs >=1.14               # [build_platform != target_platform]
+    - r-matrix >=1.7               # [build_platform != target_platform]
+    - r-osqp >=1.0                 # [build_platform != target_platform]
+    - r-rcpp >=1.1                 # [build_platform != target_platform]
     - r-rcppeigen                  # [build_platform != target_platform]
-    - r-rmpfr                      # [build_platform != target_platform]
-    - r-scs >=3.0                  # [build_platform != target_platform]
+    - r-s7 >=0.2                   # [build_platform != target_platform]
+    - r-scs >=3.2                  # [build_platform != target_platform]
+    - r-slam >=0.1                 # [build_platform != target_platform]
   host:
     - r-base
-    - r-bit64
-    - r-cli
-    - r-ecosolver >=0.5.4
-    - r-gmp
-    - r-matrix
-    - r-osqp
-    - r-r6
-    - r-rcpp >=0.12.12
+    - r-clarabel >=0.11
+    - r-cli >=3.6
+    - r-gmp >=0.7
+    - r-highs >=1.14
+    - r-matrix >=1.7
+    - r-osqp >=1.0
+    - r-rcpp >=1.1
     - r-rcppeigen
-    - r-rmpfr
-    - r-scs >=3.0
+    - r-s7 >=0.2
+    - r-scs >=3.2
+    - r-slam >=0.1
   run:
     - r-base
-    - r-bit64
-    - r-cli
-    - r-ecosolver >=0.5.4
-    - r-gmp
-    - r-matrix
-    - r-osqp
-    - r-r6
-    - r-rcpp >=0.12.12
-    - r-rcppeigen
-    - r-rmpfr
-    - r-scs >=3.0
+    - r-clarabel >=0.11
+    - r-cli >=3.6
+    - r-gmp >=0.7
+    - r-highs >=1.14
+    - r-matrix >=1.7
+    - r-osqp >=1.0
+    - r-rcpp >=1.1
+    - r-s7 >=0.2
+    - r-scs >=3.2
+    - r-slam >=0.1
 
 test:
   commands:
