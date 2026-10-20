@@ -1,4 +1,4 @@
-{% set version = "1.9.2" %}
+{% set version = "1.9.3" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/CVXR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/CVXR/CVXR_{{ version }}.tar.gz
-  sha256: 9ffd5d33658b21f6db523de606b8ac01953a2d831f76659817a15bf8892a2802
+  sha256: 1df25273193d12c31519df33c0dbb1c602d67e038db33ba71d42249c704050d5
 
 build:
   number: 0
